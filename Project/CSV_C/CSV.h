@@ -35,7 +35,6 @@ int csv_set_field(CSVTable *table, int row, int col, const char *value);
 int csv_delete_row(CSVTable *table, int row_idx);
 int csv_add_column(CSVTable *table, const char *header_name, const char *default_val);
 
-// НОВЕ: Додавання рядка
 int csv_add_row(CSVTable *table, char **values);
 
 #endif

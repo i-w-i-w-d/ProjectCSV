@@ -160,11 +160,9 @@ int csv_add_column(CSVTable *table, const char *header_name, const char *default
     return 1;
 }
 
-// НОВЕ: Реалізація додавання рядка
 int csv_add_row(CSVTable *table, char **values) {
     if (!table) return 0;
     
-    // Розширюємо пам'ять під новий рядок
     table->data = (char***)realloc(table->data, (table->rows + 1) * sizeof(char**));
     table->data[table->rows] = (char**)malloc(table->cols * sizeof(char*));
     

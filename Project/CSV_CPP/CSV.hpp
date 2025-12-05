@@ -36,10 +36,8 @@ public:
     void deleteRow(size_t row);
     void addColumn(const string& headerName, const string& defaultValue);
     
-    // НОВЕ: Додавання рядка
     void addRow(const vector<string>& rowValues);
     
-    // Ітератор
     class CSVIterator {
         vector<vector<string>>::iterator ptr;
     public:
